@@ -1,0 +1,26 @@
+<header class="site-header">
+  <a href="/" class="logo">Fremont Student Makers</a>
+
+  <button class="nav-toggle" aria-label="Toggle navigation">
+    &#9776; <!-- Unicode hamburger icon -->
+  </button>
+
+  <nav class="site-nav">
+    <ul>
+      <li><a href="/index.html" id="nav-home">Home</a></li>
+      <li><a href="/pages/about.html" id="nav-about">About</a></li>
+      <li><a href="/pages/projects.html" id="nav-projects">Projects</a></li>
+      <li><a href="/pages/events.html" id="nav-events">Events</a></li>
+      <li><a href="/pages/donate.html" id="nav-donate">Donate</a></li>
+    </ul>
+  </nav>  
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.site-nav');
+  
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>  
+</header>
+
