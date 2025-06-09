@@ -45,6 +45,20 @@
       container.innerHTML = card + card; // 2 events for now — add more as needed
     };
     loadEventCards();
+
+    const repoPrefix = '/Fremont-Student-Makers-Website/';  // your GitHub repo name
+
+    function loadHTML(selector, url) {
+        fetch(repoPrefix + url)
+        .then(response => response.text())
+        .then(data => {
+        document.querySelector(selector).innerHTML = data;
+        })
+        .catch(err => console.error(`Error loading ${url}: `, err));
+    }
+
+    loadHTML('#header-placeholder', 'header.html');
+    loadHTML('#footer-placeholder', 'footer.html');
   </script>
 
 </body>
