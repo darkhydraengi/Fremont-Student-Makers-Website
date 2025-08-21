@@ -40,7 +40,7 @@
       const container = document.getElementById('project-cards');
       const res = await fetch('../components/project-card.html');
       const card = await res.text();
-      container.innerHTML = card + card + card + card; // Example: 4 cards loaded
+      container.innerHTML = card; // Example: 4 cards loaded
     };
     loadProjectCards();
 
